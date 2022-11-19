@@ -1,12 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import Tags from './components/Tags/Tags';
+import Timer from './components/Timer/Timer';
 
 function App() {
   return (
     <>
       <Title>Pomodoro</Title>
       <Tags />
+      <Timer />
     </>
   );
 }

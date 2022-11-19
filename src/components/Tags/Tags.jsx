@@ -1,10 +1,15 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useState } from 'react';
+import styled, { css } from 'styled-components';
 
 function Tags() {
+  const [activeTag, setActiveTag] = useState(0);
+  const handleTagClick = (index) => {
+    setActiveTag(index);
+  };
+
   return (
     <TagsContainer>
-      {['Work', 'Short Break', 'Long Break'].map((tag, i) => (<Tag key={i}>{tag}</Tag>))}
+      {['Work', 'Short Break', 'Long Break'].map((tag, i) => (<Tag onClick={() => handleTagClick(i)} activeTag={activeTag === i} key={i}>{tag}</Tag>))}
     </TagsContainer>
   );
 }
@@ -12,7 +17,7 @@ function Tags() {
 export default Tags;
 
 const TagsContainer = styled.div`
-    background: #08002b;
+    background: ${(props) => props.theme.colors.secondary};
     height: 5rem;
     width: 40rem;
     margin: 0 auto;
@@ -29,5 +34,9 @@ const Tag = styled.button`
     border-radius: 5rem;
     flex: 1;
     font-size: 2rem;
-    background: #b85600;
+
+    ${({ activeTag }) => activeTag && css`
+    background: ${(props) => props.theme.colors.primary};
+    `}
+
 `;
