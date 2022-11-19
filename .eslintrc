@@ -1,0 +1,6 @@
+{
+    "extends": ["airbnb", "airbnb/hooks"],
+    "rules": {
+        "react/jsx-no-useless-fragment": "off"
+    }
+}
