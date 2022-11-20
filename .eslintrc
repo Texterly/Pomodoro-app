@@ -4,6 +4,9 @@
         "react/jsx-no-useless-fragment": "off",
         "react/no-array-index-key": "off",
         "no-undef": "off",
-        "react/self-closing-comp": "off"
+        "react/self-closing-comp": "off",
+        "consistent-return": "off",
+        "no-shadow": "off",
+        "prefer-template": "off"
     }
 }
