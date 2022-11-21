@@ -8,6 +8,7 @@ function Clock() {
     setTime,
     isActive,
     setIsActive,
+    initTime,
   } = useContext(StateContext);
   useEffect(() => {
     if (isActive && time > 0) {
@@ -22,6 +23,10 @@ function Clock() {
     setIsActive(!isActive);
   };
 
+  const resetTime = () => {
+    setTime(initTime);
+  };
+
   const getTime = (time) => {
     const min = Math.floor(time / 60);
     const sec = time % 60;
@@ -34,6 +39,7 @@ function Clock() {
       <StartPauseButton onClick={toggleClock}>
         {isActive ? 'Pause' : 'Start'}
       </StartPauseButton>
+      {time === 0 && <ResetButton onClick={resetTime}>RESET</ResetButton>}
     </ClockContainer>
   );
 }
@@ -56,3 +62,7 @@ const StartPauseButton = styled.button`
   text-transform: uppercase;
   letter-spacing: 1rem;
 `;
+
+const ResetButton = styled(StartPauseButton)`
+  color: red;
+  `;

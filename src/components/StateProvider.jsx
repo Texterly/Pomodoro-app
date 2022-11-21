@@ -4,14 +4,14 @@ export const StateContext = createContext();
 
 function StateProvider({ children }) {
   const [workTime, setWorkTime] = useState(25 * 60);
-  const [shortBreakTime, setShortBreakTime] = useState(5 * 60);
+  const [shortBreakTime, setShortBreakTime] = useState(5);
   const [longBreakTime, setLongBreakTime] = useState(30 * 60);
 
   const [initTime, setInitTime] = useState(0);
 
   const [activeTag, setActiveTag] = useState(0);
   const [progress, setProgress] = useState(55);
-  const [time, setTime] = useState(500);
+  const [time, setTime] = useState(0);
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
@@ -35,7 +35,22 @@ function StateProvider({ children }) {
 
   return (
     <StateContext.Provider value={{
-      activeTag, setActiveTag, progress, setProgress, time, setTime, isActive, setIsActive,
+      activeTag,
+      setActiveTag,
+      progress,
+      setProgress,
+      time,
+      setTime,
+      isActive,
+      setIsActive,
+      initTime,
+      setInitTime,
+      workTime,
+      setWorkTime,
+      shortBreakTime,
+      setShortBreakTime,
+      longBreakTime,
+      setLongBreakTime,
     }}
     >
       {children}
