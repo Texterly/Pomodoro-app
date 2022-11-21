@@ -7,6 +7,8 @@
         "react/self-closing-comp": "off",
         "consistent-return": "off",
         "no-shadow": "off",
-        "prefer-template": "off"
+        "prefer-template": "off",
+        "react/jsx-no-constructed-context-values": "off",
+        "react-hooks/exhaustive-deps": "off"
     }
 }

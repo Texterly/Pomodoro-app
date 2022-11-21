@@ -1,9 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
 import styled from 'styled-components';
+import { StateContext } from '../../../StateProvider';
 
 function Clock() {
-  const [time, setTime] = useState(100);
-  const [isActive, setIsActive] = useState(false);
+  const {
+    time,
+    setTime,
+    isActive,
+    setIsActive,
+  } = useContext(StateContext);
   useEffect(() => {
     if (isActive && time > 0) {
       const inteval = setInterval(() => {

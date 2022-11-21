@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+import { StateContext } from '../../StateProvider';
 import Clock from './Clock/Clock';
 
 function CircularProgress() {
-  const [progress, setProgress] = useState(10);
+  const { progress, setProgress } = useContext(StateContext);
 
   return (
     <OuterCircle progress={progress}>
