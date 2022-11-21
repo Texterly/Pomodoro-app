@@ -25,6 +25,7 @@ function Clock() {
 
   const resetTime = () => {
     setTime(initTime);
+    setIsActive(false);
   };
 
   const getTime = (time) => {
