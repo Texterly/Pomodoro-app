@@ -22,7 +22,7 @@ function App() {
       <Title>Pomodoro</Title>
       <Tags />
       <Timer />
-      <CogIcon>
+      <CogIcon onClick={onOpen}>
         <FaCog />
       </CogIcon>
     </>

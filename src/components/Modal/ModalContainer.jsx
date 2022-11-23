@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function ModalContainer() {
+function ModalContainer({ isOpen, onClose }) {
   return (
     <Container>
       <ModalContent>
         <ModalHeader>
           <ModalTitle>Modal Title</ModalTitle>
-          <ModalCloseButton>X</ModalCloseButton>
+          <ModalCloseButton onClick={onClose}>X</ModalCloseButton>
         </ModalHeader>
         <ModalBody></ModalBody>
       </ModalContent>
