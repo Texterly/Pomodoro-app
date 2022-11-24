@@ -9,6 +9,7 @@
         "no-shadow": "off",
         "prefer-template": "off",
         "react/jsx-no-constructed-context-values": "off",
-        "react-hooks/exhaustive-deps": "off"
+        "react-hooks/exhaustive-deps": "off",
+        "react/prop-types": "off"
     }
 }

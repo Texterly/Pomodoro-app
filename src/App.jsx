@@ -6,7 +6,7 @@ import Tags from './components/Tags/Tags';
 import Timer from './components/Timer/Timer';
 
 function App() {
-  const [isOPen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const onClose = () => {
     setIsOpen(false);
@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-      <Modal isOPen={isOPen} onClose={onClose} />
+      <Modal isOpen={isOpen} onClose={onClose} />
       <Title>Pomodoro</Title>
       <Tags />
       <Timer />
